@@ -1,6 +1,8 @@
 const getUser = (id)=> {
   const newId = parseFloat(id)
-  const user = userList.find(item => item.id === newId);
+  const user = userList.find(item => {
+    return item.id === newId;
+  });
   if(!user) {
     return {
       error: 'no user'
@@ -14,7 +16,7 @@ const createUser = (name, lastName)=> {
   const newUser = {
     name,
     lastName,
-    id: Math.random() * 100
+    id: Math.floor(Math.random() * 1000 * 1000)
   }
   userList.push(newUser)
   return newUser;
