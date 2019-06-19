@@ -1,8 +1,6 @@
 const getUser = (id)=> {
   const newId = parseFloat(id)
-  const user = userList.find(item => {
-    return item.id === newId;
-  });
+  const user = userList.find(item => item.id === newId);
   if(!user) {
     return {
       error: 'no user'
