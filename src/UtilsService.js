@@ -1,30 +1,42 @@
 const esPalindromo = (palabra) => {
-	const nuevaPalabra={
-		palabra,
-	}	
-	for (var i=0;i<palabra.length;i++){
-		if(palabra[i]!=palabra[palabra.length-i-1]){
-			return false;
-		}
-		return true;
-	}
-	return nuevaPalabra;
-}
-
-//ESTO SERIA EL CODIGO FINAL
+  const nuevaPalabra = {
+    palabra,
+  }
+  for (var i = 0; i < palabra.length; i++) {
+    if (palabra[i] != palabra[palabra.length - i - 1]) {
+      return false;
+    }
+    return true;
+  }
+  return nuevaPalabra;
+};
 
 const biggestObject = (objectList) => {
-  let mayorObjectLength = 0;  
+  let mayorObjectLength = 0;
   objectList.forEach((elemento, index) => {
-		let NewObjectArray = Object.keys(elemento);
-		let objLength = NewObjectArray.length;
-		if (mayorObjectLength < objLength) {
-			mayorObjectLength = objLength;
-			mayorObjectIndex = index;
-		}
-	});
+    let NewObjectArray = Object.keys(elemento);
+    let objLength = NewObjectArray.length;
+    if (mayorObjectLength < objLength) {
+      mayorObjectLength = objLength;
+      mayorObjectIndex = index;
+    }
+  });
   return objectList[mayorObjectIndex];
-}
+};
+
+const primos = (primosArray) => {
+  let newPrimosArray = [];
+  let newPrimosArrayIndex = 0;
+  primosArray.map((element, index) => {
+    if ((element % 2) !== 0) {
+      newPrimosArray[newPrimosArrayIndex] = primosArray[index];
+      newPrimosArrayIndex++;
+    };
+  });
+ return newPrimosArray;
+};
+
+
 //  console.log(biggestObject(objectList));
 
 //  const objectList = [];
@@ -77,7 +89,7 @@ let objLength = objArray.length; // crea una variable objLength y le adjudicamos
       return objectList[mayorObject];
   });
   */
- 
+
 
 // ALGORITMO 
 // for (var i = 0; i < objectList.length; i++) {
@@ -120,7 +132,7 @@ let objLength = objArray.length; // crea una variable objLength y le adjudicamos
 
 
 //ESTO ERA EL CODIGO INICIAL
-  
+
 // let i;
 // let mayorObject= 0;
 // for (i = 0; i < objectList[i].length; i++) {
@@ -133,6 +145,7 @@ let objLength = objArray.length; // crea una variable objLength y le adjudicamos
 // }
 
 module.exports = {
-	esPalindromo,
-	biggestObject
+  esPalindromo,
+  biggestObject,
+  primos
 }
