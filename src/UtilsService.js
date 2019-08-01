@@ -26,14 +26,8 @@ const biggestObject = (objectList) => {
 
 const primos = (primosArray) => {
   let newPrimosArray = [];
-  let newPrimosArrayIndex = 0;
-  primosArray.map((element, index) => {
-    if ((element % 2) !== 0) {
-      newPrimosArray[newPrimosArrayIndex] = primosArray[index];
-      newPrimosArrayIndex++;
-    };
-  });
- return newPrimosArray;
+  primosArray.map(x => x % 2 !== 0 ? newPrimosArray.push(x) : x);
+  return newPrimosArray;
 };
 
 
