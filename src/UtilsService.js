@@ -24,11 +24,13 @@ const biggestObject = (objectList) => {
   return objectList[mayorObjectIndex];
 };
 
-const primos = (primosArray) => {
-  let newPrimosArray = [];
-  primosArray.map(x => x % 2 !== 0 ? newPrimosArray.push(x) : x);
-  return newPrimosArray;
-};
+const primos = (primosArray) => primosArray.filter(x => x % 2 !== 0);
+
+
+//const fieldDifferent = (arr) => { arr.reduce((obj, item) => Object.assign(obj, { [item.key]: item.value }), {}); };
+
+
+
 
 
 module.exports = {
