@@ -12,4 +12,8 @@ module.exports = (app) => {
 	app.post('/primos', (req, res) => {
 		res.json(UtilsService.primos(req.body))
 	});
+	
+	app.get('/msg', (req, res) => {
+		res.json(UtilsService.msg(req.body))
+	});
 }
