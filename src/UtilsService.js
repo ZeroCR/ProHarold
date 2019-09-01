@@ -1,15 +1,13 @@
 const esPalindromo = (palabra) => {
-  const nuevaPalabra = {
-    palabra,
-  }
+  let palindromoMsg; 
   for (var i = 0; i < palabra.length; i++) {
     if (palabra[i] != palabra[palabra.length - i - 1]) {
-      return false;
+      return palindromoMsg = "No es palindromo";
     }
-    return true;
+    return palindromoMsg = "Es palindromo";
   }
-  return nuevaPalabra;
-};
+  return palindromoMsg;
+ };
 
 const biggestObject = (objectList) => {
   let mayorObjectLength = 0;
