@@ -4,6 +4,7 @@ const cors = require('cors')
 // const rutas = require('./src/rutas')
 const user = require('./src/user');
 const UtilsController = require('./src/UtilsController');
+const db = require('./src/db');
 // const client = require('./src/client')
 // const pets = require('./src/pets')
 const app = express();
@@ -20,4 +21,7 @@ UtilsController(app);
 // client(app);
 // pets(app);
 
-app.listen(port, () => console.log(`myPetShop app listening on port ${port}!`));
+app.listen(port, async () => {
+    console.log(`myPetShop app listening on port ${port}!`)
+    await db.initDb()
+});

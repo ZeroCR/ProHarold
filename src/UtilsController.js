@@ -2,7 +2,8 @@ const UtilsService = require('./UtilsService')
 
 module.exports = (app) => {
 	app.post('/esPalindromo', (req, res) => {
-		res.json(UtilsService.esPalindromo(req.query.palabra))
+		const result = UtilsService.esPalindromo(req.body);
+		res.json({result})
 	});
 
 	app.post('/biggestObject', (req, res) => {

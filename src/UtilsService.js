@@ -1,12 +1,13 @@
-const esPalindromo = (palabra) => {
-  let palindromoMsg; 
+const mongoDb = require('./db');
+
+const esPalindromo = ({palabra}) => {
+  let palindromoMsg = "";
   for (var i = 0; i < palabra.length; i++) {
     if (palabra[i] != palabra[palabra.length - i - 1]) {
-      return palindromoMsg = "No es palindromo";
+      return palindromoMsg = "No es Palindromo =(";
     }
-    return palindromoMsg = "Es palindromo";
+    return palindromoMsg = "Es Palindromo!!!!!";
   }
-  return palindromoMsg;
  };
 
 const biggestObject = (objectList) => {
